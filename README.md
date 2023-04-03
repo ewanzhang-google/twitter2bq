@@ -5,7 +5,6 @@ Twitter2BQ is a Google Cloud Dataflow pipeline that can fetch recent tweets and 
 ## ToDo
 - [Done] Add instructions on how to schedule the pipeline
 - [Done] Extend examples of how to use searchtweets api
-- [] Unit test
 
 ## Installation
 
