@@ -1,6 +1,6 @@
 https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet
 # Twitter2BQ
-Twitter2BQ is a Google Cloud Dataflow pipeline that can fetch recent tweets and store them in BigQuery. It reads from the [Twitter API v2 Search Tweet](https://developer.twitter.com/en/docs/twitter-api/tweets/search/introduction) functionality by leveraging the [`searchtweets-v2`](https://pypi.org/project/searchtweets-v2/) Python library from Twitter. The pipeline is batched (bounded) and intended to be run on a recurring schedule.
+Twitter2BQ is a Google Cloud Dataflow pipeline that can fetch recent tweets and store them in BigQuery. It reads from the [Twitter API v2 Search Tweet](https://developer.twitter.com/en/docs/twitter-api/tweets/search/introduction) functionality by leveraging the [`searchtweets-v2`](https://pypi.org/project/searchtweets-v2/) Python library from Twitter. The endpoint to return recent searches can only deliver up to 100 Tweets per request so the pipeline is batched (bounded) and intended to be run on a recurring schedule.
 
 ## ToDo
 - [Done] Add instructions on how to schedule the pipeline
