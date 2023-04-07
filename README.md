@@ -64,11 +64,11 @@ Twitter2BQ is a Google Cloud Dataflow pipeline that can fetch recent tweets and 
 1. Open Cloud Shell by clicking the "Activate Cloud Shell" button at the top of the Google Cloud console. 
 1. Clone this repository to your Cloud Shell environment.
     ```
-    git clone https://github.com/TODO-UPDATE-URL.git
+    git clone https://github.com/ewanzhang-google/twitter2bq.git
     ```
 1. Move into the cloned repository.
     ```
-    cd ./data-ingestion/twitter2bq
+    cd twitter2bq
     ```
 1. Install prerequisites Python packages to your Cloud Shell environment.
     ```
@@ -124,12 +124,9 @@ Twitter2BQ is a Google Cloud Dataflow pipeline that can fetch recent tweets and 
 
     RUN pip install -U -r ./requirements.txt
     ```
-1. Create an empty template spec json file in the desired GCS bucket
+1. Create an empty template spec json file in the GCS bucket
     * replace ```BUCKET_NAME``` with your Cloud Storage bucket name
-    * replace ```BUCKET_LOCATION``` with your bucket location. (Example: `us-central1`)
     ```
-    gcloud storage buckets create gs://BUCKET_NAME --location=BUCKET_LOCATION
-    
     touch twitter2bq_template.json
     gsutil cp twitter2bq_template.json gs://BUCKET_NAME/templates/
     ```
@@ -191,7 +188,7 @@ Twitter2BQ is a Google Cloud Dataflow pipeline that can fetch recent tweets and 
     * You can optionally add --max_tweets ```NUMBER_BETWEEN_10_AND_100``` towards the end of the parameters list to specify the number of tweets you want to return per call (default 10; max 100)
 
 ## License
-    Copyright 2022 Google LLC
+    Copyright 2023 Google LLC
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
